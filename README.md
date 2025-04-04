@@ -12,3 +12,15 @@ Python's built-in list can be used as a stack, where:
 
 > [!IMPORTANT]
 > Solver function [here](https://github.com/hainguyen1511/tower-of-Hanoi/blob/main/full%20tower%20hanoi.txt) will have repetitive steps that we could shrink down by recursive thinking
+
+> [!WARNING]
+>The Tower of Hanoi is a classic mathematical puzzle that follows a set of recursive rules. The objective is to move a stack of disks from one peg to another, following these constraints:
+Rules:
+You can only move one disk at a time.
+A disk must always be placed on top of another larger disk, never on a smaller one.
+You can use a temporary peg to store disks while moving them.
+Recursive Solution:
+To solve the puzzle with n disks:
+Move n-1 disks from the source peg to the auxiliary peg.
+Move the largest disk directly to the destination peg.
+Move the n-1 disks from the auxiliary peg to the destination peg.
