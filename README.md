@@ -12,7 +12,8 @@ Python's built-in list can be used as a stack, where:
 
 > [!IMPORTANT]
 > This solver function will have repetitive steps that we could shrink down by recursive thinking
-> def solver(n, towers, sp):
+
+def solver(n, towers, sp):
     if n == 0:  # Termination condition
         return
     elif n <= 1:
