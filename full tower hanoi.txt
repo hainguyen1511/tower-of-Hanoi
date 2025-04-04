@@ -1,0 +1,262 @@
+turn the function solver into recursive function:
+
+#NAME(s): Hai T. Nguyen
+#Assignment Towers of Hanoi (you may work alone or in a pair) 
+#NOTE: FPT.so and Gkit.py files are included, but are ONLY needed if you intend to add graphics 
+def pop(towers, location, sp):
+    if sp[location] == -1:
+        return -1
+    temp = towers[location][sp[location]]
+    towers[location][sp[location]] = -1
+    sp[location] = sp[location] - 1
+    return temp
+
+def push(towers, location, stk, sp):
+    sp[location] = sp[location] + 1
+    towers[location][sp[location]] = stk
+
+def mover(n, origin, destination, towers, sp):
+    if n > 0:
+        temp = pop(towers, origin, sp)
+        if temp != -1:
+            push(towers, destination, temp, sp)
+
+def solver(n, towers, sp):
+    if n == 0:  # Termination condition
+        return
+    elif n <= 1:
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+    elif n <= 2:
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+    elif n <= 3:
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+    elif n <= 4:
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+    elif n <= 5:
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,1,towers,sp)
+        display_towers(towers)
+        mover(n,2,1,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+        mover(n,1,0,towers,sp)
+        display_towers(towers)
+        mover(n,1,2,towers,sp)
+        display_towers(towers)
+        mover(n,0,2,towers,sp)
+        display_towers(towers)
+    solver(n - 1, towers, sp)
+########## display towers ##########
+def display_towers(towers) :
+	print()
+	k = len(towers[0])-1
+	while(k >= 0) :
+		if(towers[0][k] != -1) :
+			print(towers[0][k]+1 , end= "  ")
+		else :
+			print("+" , end= "  ")
+		if(towers[1][k] != -1) :
+			print(towers[1][k]+1 , end= "  ")
+		else :
+			print("+" , end= "  ")
+		if(towers[2][k] != -1):
+			print(towers[2][k]+1 , end= "  ")
+		else :
+			print("+" , end= "  ")
+		print()
+		k = k - 1
+	print("_______")
+######### main ############
+# Example using a 5-ring tower
+n = int(input("Enter number of disc: "))
+tower0 = []
+tower1 = []
+tower2 = []
+i = n-1
+while(i >= 0) :
+    tower0.append(i)
+    tower1.append(-1)
+    tower2.append(-1)
+    i -= 1
+towers = [tower0,tower1,tower2]
+#towers[0] = [4,3,2,1,0]  # tower 0
+#towers[1] = [-1,-1,-1,-1,-1]  # tower 1
+#towers[2] = [-1,-1,-1,-1,-1]  # tower 2
+sp = [n-1,-1,-1]# stack pointers for each tower
+display_towers(towers)
+solver(n,towers,sp)
+print("Hit -enter- key to continue")
