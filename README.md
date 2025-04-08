@@ -29,4 +29,6 @@ Move n-1 disks from the source peg to the auxiliary peg.
 Move the largest disk directly to the destination peg.
 Move the n-1 disks from the auxiliary peg to the destination peg.
 
+> [!NOTE]
+> Reference: 
 [![Watch the video](https://github.com/user-attachments/assets/a38a7bf4-98f6-4045-9ae0-0ce5045f5d2b)](https://youtu.be/rf6uf3jNjbo?si=faxTwA2x6dNK_1lz)
