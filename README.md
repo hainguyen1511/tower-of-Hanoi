@@ -1,6 +1,6 @@
 # Tower of Hanoi
-Algorithmic Thinking
-* the stacking technique in Python
+* Algorithmic Thinking
+* Utilizing the stacking technique in Python
 > [!NOTE]
 >In Python, a stack is a data structure that follows the Last-In, First-Out (LIFO) principle. The two fundamental operations are:
 * Push: Adding an element to the top of the stack.
